@@ -12,7 +12,7 @@ To first get a hang of ARM assembly I will work through the book called [Program
 - 8GB LPDDR4-3200 SDRAM
 
 #### Broadcom BCM2711
-- [Benchmark, SPecs and Test of the BRadcom BCM2711](https://www.cpu-monkey.com/en/cpu-raspberry_pi_4_b_broadcom_bcm2711)
+- [Benchmark, Specs and Test of the Broadcom BCM2711](https://www.cpu-monkey.com/en/cpu-raspberry_pi_4_b_broadcom_bcm2711)
 
 #### Quad core Cortex-A72 
 - [ARM Developer Cortex-A72 Specifications](https://developer.arm.com/Processors/Cortex-A72)
