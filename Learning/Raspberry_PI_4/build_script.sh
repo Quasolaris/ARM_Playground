@@ -65,7 +65,7 @@ elif [[ $build_mode = "-bdr" ]]; then
 	echo "Building Binary with debugg information an daterting debugger"
 	as --gstabs+ -o "$asm_file.o" $asm_file && ld -o $asm_binary "$asm_file.o"
 	rm "$asm_file.o"
-	gdb $asm_binary -tui
+	gdb $asm_binary -tui -ex "layout regs"
 
 else
 	echo "==================[FLAGS]==================
