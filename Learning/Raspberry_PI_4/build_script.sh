@@ -16,7 +16,7 @@ if [[ $build_mode = "-b" ]]; then
 elif [[ $build_mode = "-bod" ]]; then
 
 	echo "Building Binary and showing object dump"
-	as --gstabs+ -o "$asm_file.o" $asm_file && ld -o $asm_binary "$asm_file.o"
+	as -o "$asm_file.o" $asm_file && ld -o $asm_binary "$asm_file.o"
 
 	echo "
 
