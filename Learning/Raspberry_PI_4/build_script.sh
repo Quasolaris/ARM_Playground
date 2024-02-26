@@ -62,10 +62,27 @@ elif [[ $build_mode = "-bd" ]]; then
 
 elif [[ $build_mode = "-bdr" ]]; then
 
-	echo "Building Binary with debugg information an daterting debugger"
+	echo "Building Binary with debugg information an running debugger"
+	
+	echo "
+
+	=========== ASSEMBLER OUTPUT
+
+	"
 	as --gstabs+ -o "$asm_file.o" $asm_file && ld -o $asm_binary "$asm_file.o"
-	rm "$asm_file.o"
-	gdb $asm_binary -tui -ex "layout regs"
+	
+	echo "
+
+	=========== 
+
+	"
+
+	read -p "Run debugger? (y/n): " answer
+	if [[ $answer = "y" ]]; then
+
+		rm "$asm_file.o"
+		gdb $asm_binary -tui -ex "layout regs"
+	fi
 
 else
 	echo "==================[FLAGS]==================
@@ -75,7 +92,3 @@ else
 	-bd		{.s file} 	Build binary with debuggung information
 	-bdr		{.s file} 	Build binary and start debugger"
 fi
-
-
-
-
