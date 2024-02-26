@@ -28,6 +28,9 @@ objdump -s -d -M no-aliases FILE.o
 ```
 
 ## GDB
+
+### GDB uses OCTAL to display return codes
+
 - [Use GDB for Assembly Programming](https://jacobmossberg.se/posts/2017/01/17/use-gdb-on-arm-assembly-program.html)
 
 ### Navigating the GNUDebugger
