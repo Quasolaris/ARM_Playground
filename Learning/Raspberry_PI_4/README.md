@@ -116,3 +116,17 @@ Which is -16
 
 [See the ARM Documentatiopn about W and X Registers](https://developer.arm.com/documentation/102374/0101/Registers-in-AArch64---general-purpose-registers)
 
+# Carry Flag
+To make an opcode use the carry we can simply add the character **S** to the end of it, like ```ADDS```. This applies to all instructions.
+
+## Condition Flag
+The flag **C** is set when a result of an addition is to large, then it is set from 0 to 1.
+
+Example:
+When we add two 128Bit numbers, we need four 64Bit registers, therefore we need to first add the two lower order bits and then add the higher order bits with the carry flag add ```ADC```
+```assmenbly
+ADDS X1, X3, X5
+ADC X0, X2, X4
+```
+This only takes two cycles.
+

@@ -1,0 +1,10 @@
+.global _start
+_start:
+	ldr X2, =0xFFFFFFFFFFFFFFFF
+	ldr X3, =0xFFFFFFFFFFFFAAAA
+	ldr X4, =0x1FFFFFFFFFFFFFFF
+	ldr X5, =0xFFFFFFFFFFFFAAAA
+
+	adds X1, X3, X5
+	adc  X0, X2, X4
+
