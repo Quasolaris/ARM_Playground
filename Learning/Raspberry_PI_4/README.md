@@ -124,7 +124,7 @@ The flag **C** is set when a result of an addition is to large, then it is set f
 
 Example:
 When we add two 128Bit numbers, we need four 64Bit registers, therefore we need to first add the two lower order bits and then add the higher order bits with the carry flag add ```ADC```
-```assmenbly
+```assembly
 ADDS X1, X3, X5
 ADC X0, X2, X4
 ```
